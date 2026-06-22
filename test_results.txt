@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0
+rootdir: /Users/jeffkimkimo/Documents/GitHub/ai110-module1show-gameglitchinvestigator-starter-main
+plugins: anyio-4.13.0
+collected 8 items
+
+tests/test_game_logic.py ........                                        [100%]
+
+============================== 8 passed in 0.02s ===============================
