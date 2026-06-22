@@ -27,7 +27,7 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - [x] **Describe the game's purpose.** A Streamlit number-guessing game: the app
   picks a secret number in a range that depends on difficulty (Easy 1–20,
-  Normal 1–100, Hard 1–500). You enter guesses and the game tells you whether
+  Normal 1–100, Hard 1–200). You enter guesses and the game tells you whether
   to go higher or lower until you find it or run out of attempts. Score rewards
   winning in fewer attempts.
 

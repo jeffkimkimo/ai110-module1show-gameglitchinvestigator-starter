@@ -34,7 +34,9 @@ difficulty = st.sidebar.selectbox(
 attempt_limit_map = {
     "Easy": 6,
     "Normal": 8,
-    "Hard": 5,
+    # Hard has the widest range (1-200); 8 attempts keeps it winnable
+    # with optimal play (ceil(log2(200)) == 8) but genuinely challenging.
+    "Hard": 8,
 }
 attempt_limit = attempt_limit_map[difficulty]
 
@@ -56,8 +58,11 @@ def start_new_game():
     st.session_state.history = []
 
 
-# Initialise state on first load.
-if "secret" not in st.session_state:
+# Initialise state on first load, and start a fresh round whenever the
+# difficulty changes (otherwise the secret/attempts would be stale and could
+# fall outside the newly selected range).
+if "secret" not in st.session_state or st.session_state.get("difficulty") != difficulty:
+    st.session_state.difficulty = difficulty
     start_new_game()
 
 st.subheader("Make a guess")

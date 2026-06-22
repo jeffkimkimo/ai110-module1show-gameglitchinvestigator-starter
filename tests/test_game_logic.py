@@ -56,5 +56,5 @@ def test_update_score_win_rewards_fewer_attempts():
 def test_get_range_for_difficulty():
     assert get_range_for_difficulty("Easy") == (1, 20)
     assert get_range_for_difficulty("Normal") == (1, 100)
-    assert get_range_for_difficulty("Hard") == (1, 500)
+    assert get_range_for_difficulty("Hard") == (1, 200)
     assert get_range_for_difficulty("???") == (1, 100)  # unknown -> default
